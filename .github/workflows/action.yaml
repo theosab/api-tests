@@ -21,6 +21,5 @@ jobs:
 
       - name: Run tests
         run: npm test
-        # If your test script is in a subdirectory, use:
-        # working-directory: path/to/your/package
+        
 

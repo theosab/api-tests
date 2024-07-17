@@ -1,14 +1,26 @@
-name: Test Login Endpoint
+: Test Login Endpoint
 on: [push]
+
 jobs:
   dev-test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-      - run: npm install
-      - run: npm test
+
+      - name: Install dependencies
+        run: npm install
+        # If your package.json is in a subdirectory, use:
+        # working-directory: path/to/your/package
+
+      - name: Run tests
+        run: npm test
+        # If your test script is in a subdirectory, use:
+        # working-directory: path/to/your/package
 

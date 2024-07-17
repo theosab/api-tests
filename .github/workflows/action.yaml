@@ -1,24 +1,13 @@
-# This workflow tests the Login Endpoint upon a push event
 name: Test Login Endpoint
-
 on: [push]
-
 jobs:
-  test-login-endpoint:
+  dev-test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
+      - uses: actions/checkout@v3
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests for Login Endpoint
-        # Assuming your tests for the login endpoint are defined in a script named "test-login"
-        run: npm run test-login
+      - run: npm install
+      - run: npm test

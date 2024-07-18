@@ -15,8 +15,8 @@ jobs:
          node-version: '14'
 
       - run: npm install
-        working-directory: ./github/workflows
+        working-directory: ./NodeJSExample
         
       - name: Run tests  
         run: npm test
-      working-directory: ./github/workflows
+        working-directory: ./NodeJSExample

@@ -12,7 +12,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
-    - name: Install dependencies
-      shell: pwsh
-      run: npm install
+    - - run: npm install
+        working-directory: /github/workflows 
+      - name: Run tests  
+        run: npm test
       working-directory: ./github/workflows

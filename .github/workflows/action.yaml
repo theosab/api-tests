@@ -1,4 +1,4 @@
-name: Build and Test
+name: Run PowerShell Script
 on: [push]
 jobs:
   build:
@@ -6,11 +6,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Install Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-    - name: Install dependencies
+    - name: Run PowerShell Script
       shell: pwsh
-      run: npm install
       working-directory: C:\Users\Theo\Documents\api-tests\.github\workflows

@@ -1,16 +1,22 @@
-name: Build and Test
+name: Test Login Endpoint
+
 on: [push]
+
 jobs:
-  build:
-    runs-on: windows-latest
+  dev-test:
+
+    runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Install Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-    - name: Install dependencies
-      shell: pwsh
-      run: npm install
-      working-directory: C:\Users\Theo\Documents\api-tests
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+         node-version: '14'
+
+      - run: npm install
+        working-directory: C:\Users\Theo\Documents\api-tests
+        
+      - name: Run tests  
+        run: npm test
+        working-directory: C:\Users\Theo\Documents\api-tests

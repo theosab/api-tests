@@ -15,4 +15,4 @@ jobs:
     - name: Install dependencies
       shell: pwsh
       run: npm install
-      working-directory: C:\Users\Theo\Documents\api-tests\.github\workflows\action.yaml
+      working-directory: ./github/workflows

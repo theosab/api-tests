@@ -15,8 +15,8 @@ jobs:
          node-version: '14'
 
       - run: npm install
-        working-directory: ./github
+        working-directory: ./C:\Users\Theo\Documents\GitHub\cit262-theosab-test\.github\workflows
         
       - name: Run tests  
         run: npm test
-        working-directory: ./github
+        working-directory: ./C:\Users\Theo\Documents\GitHub\cit262-theosab-test\.github\workflows

@@ -13,4 +13,4 @@ jobs:
     - name: Install dependencies
       shell: pwsh
       run: npm install
-      working-directory: C:\Users\Theo\Documents\api-tests
+      working-directory: https://github.com/theosab/api-tests/tree/main/.github/workflows

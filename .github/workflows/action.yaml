@@ -18,9 +18,3 @@ jobs:
         
       - name: Run tests  
         run: npm test
-
-      - run: npm ci
-
-      - run: npm test
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}

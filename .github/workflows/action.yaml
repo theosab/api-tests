@@ -15,5 +15,4 @@ jobs:
          node-version: '14'
 
       - run: npm install
-      - name: Run jest
-        run: npm tests
+        run: npm jest
